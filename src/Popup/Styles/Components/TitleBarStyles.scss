@@ -1,0 +1,26 @@
+@import "../../../styles/reset";
+
+#title-bar {
+    text-align: center;
+    padding: 1rem 0rem;
+    margin: 0;
+    border-bottom: 0.001rem solid var(--secondary-color);
+}
+
+#title-text {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+
+#title-text a:hover {
+    color: red;
+}
+
+#title-bar a {
+    text-decoration: inherit;
+    color: inherit;
+    margin: 0;
+    padding: 0;
+}
