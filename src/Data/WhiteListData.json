@@ -1,0 +1,9 @@
+{
+    "data": {
+        "youtube": {
+            "header": "YouTube Channels",
+            "empty_phrase": "No Channels",
+            "placeholder": "Channel Name"
+        }
+    } 
+}

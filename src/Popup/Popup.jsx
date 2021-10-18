@@ -1,46 +1,47 @@
-import * as React from 'react';
-import browser from 'webextension-polyfill';
+import React, { useEffect } from 'react'
 
-import './styles.scss';
+import LogIn from './Pages/LogIn'
+import MainContents from './Pages/MainContents'
 
-function openWebPage(url) {
-  return browser.tabs.create({url});
+import { useSelector, useDispatch } from 'react-redux'
+
+import {
+    setAuthenticated,
+} from '../Background/Redux/Actions/User.js'
+
+function Popup(props){
+    const dispatch = useDispatch()
+
+    const authenticated = useSelector(state => state.user.authenticated)
+    const colorMode = useSelector(state => state.user.color_mode)
+
+    function logout(){
+        localStorage.clear()
+        localStorage.setItem('color_mode',colorMode)
+        localStorage.setItem('fill_mode',fillMode)
+    }
+
+    useEffect(() => {
+        document.documentElement.setAttribute('data-theme', colorMode);
+    }, [colorMode])
+
+    var viewer = (
+        <>
+        </>
+    )
+
+    if(authenticated){
+        viewer = <MainContents />
+    }
+    else{
+        viewer = <LogIn />
+    }
+
+    return (
+        <div id='page-content'>
+            {viewer}
+        </div>
+    )
 }
 
-const Popup = () => {
-  return (
-    <section id="popup">
-      <h2>WEB-EXTENSION-STARTER</h2>
-      <div className="links__holder">
-        <ul>
-          <li>
-            <button
-              type="button"
-              onClick={() => {
-                return openWebPage(
-                  'https://github.com/abhijithvijayan/web-extension-starter'
-                );
-              }}
-            >
-              GitHub
-            </button>
-          </li>
-          <li>
-            <button
-              type="button"
-              onClick={() => {
-                return openWebPage(
-                  'https://www.buymeacoffee.com/abhijithvijayan'
-                );
-              }}
-            >
-              Buy Me A Coffee
-            </button>
-          </li>
-        </ul>
-      </div>
-    </section>
-  );
-};
-
-export default Popup;
+export default Popup

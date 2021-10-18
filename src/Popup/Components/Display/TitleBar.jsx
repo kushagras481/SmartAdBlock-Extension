@@ -10,7 +10,7 @@ function TitleBar(props){
     return (
         <div id='title-bar'>
             <h1 id='title-text'>
-                <a href={url} target="_blank" rel="noopener noreferrer">SupportYouYoutuber</a>
+                <a href={url} target="_blank" rel="noopener noreferrer">SmartAdBlock</a>
             </h1>
         </div>
     )

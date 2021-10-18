@@ -1,0 +1,14 @@
+{
+    "data": {
+        "linked_ad_blockers": [
+            {
+                "adblocker_name": "UBlock Origin",
+                "extension_id": "cjpalhdlnbpafiamejdnhcphjbkeiagm"
+            },
+            {
+                "adblocker_name": "AdBlock Plus",
+                "extension_id": "nhcphjbkeiagmcjpalafiamejdhdlnbp"
+            }
+        ]
+    }
+}

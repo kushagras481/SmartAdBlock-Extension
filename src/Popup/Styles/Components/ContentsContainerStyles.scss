@@ -1,0 +1,39 @@
+#container-section {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+
+
+#extension-toggle-section {
+    margin: 0rem;
+    padding: 0rem 100rem;
+    display:flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#adblocker-status-on-section{
+    margin: 0rem;
+    padding: 0rem 1rem;
+    float: right;
+    display: flex;
+    color: red;
+    align-items: center;
+    justify-content: center;
+}
+
+#adblocker-status-off-section{
+    margin: 0rem;
+    padding: 0rem 1rem;
+    float: right;
+    display: flex;
+    color: grey;
+    align-items: center;
+    justify-content: center;
+}
+
+
