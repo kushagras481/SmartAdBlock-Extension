@@ -4,10 +4,7 @@ import '../../Styles/Components/ItemsHeaderStyles.scss'
 
 function ItemsHeader(props){
     let name = props.name
-
-    function edit(){
-        console.log('edit')
-    }
+    let itemsHeaderButtons = props.itemsHeaderButtons
 
     return (
         <div class='items-header-div'>
@@ -18,8 +15,7 @@ function ItemsHeader(props){
             </div>
             <div class='right-float vertical-align'>
                 <div class='items-buttons-div'>
-                    <button class='add-button' onClick={edit}>Add</button>
-                    <button class='save-button' onClick={edit}>Save</button>
+                    {itemsHeaderButtons}
                 </div>
             </div>
         </div>

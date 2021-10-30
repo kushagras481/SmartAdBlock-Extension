@@ -8,8 +8,9 @@ import ItemsList from './ItemsList'
 function ItemsBox(props){
     let header = props.header
     let emptyPhrase = props.emptyPhrase
+    let itemsHeaderButtons = props.itemsHeaderButtons
 
-    let itemsListView
+    var itemsListView
 
     if(props.children == null || typeof props.children == 'undefined'){
         itemsListView = (
@@ -29,7 +30,7 @@ function ItemsBox(props){
     return (
         <div class='items-box-section'>
             <div class='items-header-section'>
-                <ItemsHeader name={header}/>
+                <ItemsHeader name={header} itemsHeaderButtons={itemsHeaderButtons} />
             </div>
             <div class='items-list-section'>
                 <ItemsList>

@@ -7,6 +7,7 @@
     border-radius: 0.6rem;
     width: 100%;
     height: 100%;
+    border: 0.1rem solid var(--secondary-color);
 }
 
 .items-header-section {
@@ -41,4 +42,33 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+}
+
+.add-button-section  {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.add-button {
+    font-size: 1.6rem;
+    background-color: transparent;
+    color: var(--font-color);
+    margin: 0;
+    padding: 0.2rem 0.6rem;
+    border-radius: 0.4rem;
+    border: 0.1rem solid green;
+}
+
+.add-button:hover {
+    background-color: green;
+}
+
+.add-button:before {
+    content: '\FF0B';
 }

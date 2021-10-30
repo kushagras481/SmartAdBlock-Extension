@@ -6,13 +6,12 @@ import { useSelector, useDispatch } from 'react-redux'
 
 import {
     selectSite
-} from '../../../Background/Redux/Actions/Data'
+} from '../../../Background/Redux/Actions/ExtensionData'
 
 function SiteSelect(props){
     const dispatch = useDispatch()
 
-    const siteSelected = useSelector(state => state.data.site_selected)
-    const colorMode = useSelector(state => state.user.color_mode)
+    const siteSelected = useSelector(state => state.extensiondata.site_selected)
 
     const options = [
         { value: 'youtube', label: 'YouTube' },
@@ -22,12 +21,16 @@ function SiteSelect(props){
         control: (provided, state) => ({
             ...provided,
             background: 'var(--primary-color)',
-            borderColor: 'transparent',
+            border: '0.1rem solid var(--secondary-color)',
             minHeight: '3.094rem',
             height: '3.094rem',
             boxShadow: state.isFocused ? null : null,
             'font-size': '1.4rem',
-            color: 'var(--font-color)'
+            color: 'var(--font-color)',
+            ':hover': {
+                ...provided[':hover'],
+                border: '0.1rem solid var(--secondary-color)'
+            }
         }),
         valueContainer: (provided, state) => ({
             ...provided,
@@ -57,6 +60,7 @@ function SiteSelect(props){
             ...provided,
             color: 'var(--font-color)',
             background: 'var(--menu-color)',
+            border: '0.1rem solid var(--secondary-color)'
         }),
         option: (provided,state) => ({
             ...provided,
